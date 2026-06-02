@@ -13,7 +13,7 @@ set -ouex pipefail
 dnf5 install -y kitty \
     syncthing
 
-flatpak install -y app.zen_browser.zen \
+flatpak install --system -y app.zen_browser.zen \
     org.libretro.RetroArch \
     com.bitwarden.desktop \
     com.discordapp.Discord
