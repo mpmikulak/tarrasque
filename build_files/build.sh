@@ -11,12 +11,10 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y kitty \
-    syncthing
+    syncthing \
+    gdb \
+    gdb-gef
 
-flatpak install --system -y app.zen_browser.zen \
-    org.libretro.RetroArch \
-    com.bitwarden.desktop \
-    com.discordapp.Discord
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
