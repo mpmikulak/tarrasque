@@ -13,8 +13,9 @@ set -ouex pipefail
 dnf5 install -y kitty \
     syncthing \
     gdb \
-    gdb-gef
-
+    gdb-gef \
+    minicom \
+    libunwind-devel
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
