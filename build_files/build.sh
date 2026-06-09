@@ -9,13 +9,20 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
+# Enable the zen browser COPR
+dnf5 -y copr enable sneexy/zen-browser
+
+# this installs packages from fedora repos
 dnf5 install -y kitty \
-    syncthing \
     gdb \
     gdb-gef \
     minicom \
-    libunwind-devel
+    libunwind-devel \
+    zen-browser
+
+# Disable the zen browser COPR
+dnf5 -y copr disable sneexy/zen-browser
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
