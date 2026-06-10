@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # Enable the zen browser COPR and install
 dnf -y copr enable sneexy/zen-browser
-dnf install -y zen-browser
+dnf install -y sneexy/zen-browser
 
 # Disable the zen browser COPR
 # dnf -y copr disable sneexy/zen-browser
