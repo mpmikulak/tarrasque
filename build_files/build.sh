@@ -9,14 +9,7 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# Enable the zen browser COPR and install
-dnf -y copr enable sneexy/zen-browser
-dnf install -y sneexy/zen-browser
-
-# Disable the zen browser COPR
-# dnf -y copr disable sneexy/zen-browser
-
-# this installs packages from fedora repos
+# This installs packages from fedora repos
 dnf5 install -y kitty \
     gdb \
     gdb-gef \
